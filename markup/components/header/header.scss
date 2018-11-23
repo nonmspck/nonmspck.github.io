@@ -1,13 +1,16 @@
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     z-index: 101;
 }
 
 .headerRoof {
+    width: 80%;
     height: 100px;
 
     position: fixed;
-    right: 0;
     bottom: 0;
     left: 0;
 
@@ -15,10 +18,111 @@
     color: rgba($white, .45);
 
     background-color: $darkgrey-1;
+
+    @media (min-width: $grid-sl) {
+        width: 50%;
+    }
+
+    @media (min-width: $grid-ls) {
+        width: 100%;
+        height: 45px;
+
+        position: static;
+    }
+}
+
+.headerRoof__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $grid-ls) {
+        max-width: 1440px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 100px 0 470px;
+
+        justify-content: flex-end;
+        flex-direction: row;
+    }
 }
 
 .headerRoof__contacts {
     display: none;
+
+    @media (min-width: $grid-lm) {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+}
+
+.headerRoof__contactItem {
+    i {
+        margin: 0 7px 0 0;
+
+        color: rgba($white, .3);
+    }
+
+    @media (min-width: $grid-lm) {
+        &:not(:last-child) {
+            margin: 0 30px 0 0;
+        }
+    }
+}
+
+.footer__contactIco {
+    &-phone {
+        position: relative;
+        transform: scaleX(-1);
+    }
+}
+
+.headerRoof__linkWrap {
+    margin: 15px;
+    padding: 0 0 0 23px;
+
+    position: relative;
+
+    &::before {
+        content: "";
+
+        display: block;
+
+        width: 18px;
+        height: 18px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background: url("../img/content/header/headerRoof__stoneIco.svg") no-repeat center center;
+    }
+
+    @media (min-width: $grid-ls) {
+        margin: 0 35px;
+
+        flex: 0 0 auto;
+    }
+}
+
+.headerRoof__link {
+    font: 700 14px/1.2 "BrandonGrotesque", sans-serif;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+
+    transition: .3s;
+
+    &:hover,
+    &:active {
+        opacity: .5;
+    }
 }
 
 .headerNav {
@@ -38,6 +142,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: $grid-ls) {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 100px 0 170px;
+    }
 }
 
 .headerNav__logoWrap {
@@ -47,10 +157,34 @@
     flex: 0 0 auto;
 
     overflow: hidden;
+
+    @media (min-width: $grid-ls) {
+        width: 200px;
+
+        overflow: visible;
+
+        &::before {
+            content: "";
+
+            display: block;
+
+            width: 280px;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 99;
+
+            transform: translateX(-35px) skewX(-25deg);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: $white;
+        }
+    }
 }
 
 .headerNav__logoLink {
     width: 200px;
+    height: 73px;
 
     display: block;
 
@@ -60,11 +194,21 @@
     &:active {
         opacity: .3;
     }
+
+    @media (min-width: $grid-ls) {
+        position: relative;
+        top: -20px;
+        z-index: 101;
+    }
 }
 
 .headerNav__btnWrap {
     width: 38px;
     height: 32px;
+
+    @media (min-width: $grid-lm) {
+        display: none;
+    }
 }
 
 .headerNav__btn {
@@ -154,26 +298,167 @@
     }
 }
 
-.headerRoof,
-.headerNav__navWrap {
+.headerNav__link {
+    padding: 18px 10px;
+
+    @media (min-width: $grid-ls) {
+        padding: 18px 30px;
+    }
+}
+
+.headerNav__subList {
     display: none;
 }
 
 .headerNav__navWrap {
+    width: 80%;
     border: {
         top: 1px solid rgba($darkgrey-1, .15);
     }
 
     position: fixed;
     top: 100px;
-    right: 0;
     bottom: 100px;
     left: 0;
 
     background-color: $white;
     overflow-y: auto;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+
+    @media (min-width: $grid-sl) {
+        width: 50%;
+    }
+
+    @media (min-width: $grid-ls) {
+        width: 30%;
+
+        top: 145px;
+        bottom: 0;
+    }
+
+    @media (min-width: $grid-lm) {
+        width: auto;
+        border: none;
+
+        position: static;
+
+        box-shadow: none;
+        overflow-y: visible;
+    }
 }
 
-.headerNav__link {
-    padding: 18px 10px;
+.headerNav__navList {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    list-style: none;
+
+    @media (min-width: $grid-lm) {
+        flex-direction: row;
+    }
+}
+
+.headerNav__navLink {
+    width: 100%;
+    padding: 25px 0 25px 0;
+
+    display: block;
+
+    font: inherit;
+    color: $darkgrey-1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+
+    transition: .3s;
+
+    &:hover, 
+    &:active {
+        opacity: .3;
+    }
+
+    @media (min-width: $grid-lm) {
+        padding: 15px;
+    }
+}
+
+.headerNav__overlay {
+    width: 20%;
+
+    position: fixed;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .3s;
+
+    &:hover {
+        opacity: .5;
+    }
+
+    @media (min-width: $grid-sl) {
+        width: 50%;
+    }
+
+    @media (min-width: $grid-ls) {
+        width: 70%;
+
+        top: 145px;
+    }
+
+    @media (min-width: $grid-lm) {
+        display: none;
+    }
+}
+
+.headerNav__closeOverlay {
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 20px;
+    left: 15px;
+
+    opacity: 1;
+
+    &::before,
+    &::after {
+        content: "";
+
+        width: 100%;
+        height: 2px;
+
+        display: block;
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        background-color: $orange-1;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+// .headerRoof,
+// .headerNav__navWrap,
+.headerNav__overlay {
+    // display: none;
+
+    @media (min-width: $grid-lm) {
+        display: none;
+    }
 }

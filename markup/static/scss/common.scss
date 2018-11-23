@@ -4,12 +4,17 @@ html {
 
 body {
     min-height: 100vh;
+    padding: 100px 0 0;
     
     display: flex;
     flex-direction: column;
 
     font-family: "SourceSansPro", sans-serif;
     font-weight: 400;
+
+    @media (min-width: $grid-sl) {
+        padding: 145px 0 0;
+    }
 }
 
 .-content- {
