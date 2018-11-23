@@ -1,0 +1,44 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+
+    font-family: "SourceSansPro", sans-serif;
+    font-weight: 400;
+}
+
+.-content- {
+    flex-grow: 1;
+}
+
+img {
+    max-width: 100%;
+}
+
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.btn {
+    padding: 18px 30px;
+
+    font: 700 14px/1.2 "BrandonGrotesque", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $white;
+    text-decoration: none;
+
+    background-color: $orange-1;
+    transition: .3s;
+
+    &:hover,
+    &:active {
+        opacity: .5;
+    }
+}

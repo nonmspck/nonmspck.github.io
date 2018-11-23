@@ -1,0 +1,86 @@
+footer.footer
+    .footer__inner
+        .footer__head
+            a.footer__logoLink(href="index.html")
+                img.footer__logoImg(src="static/img/content/footer/footer__whiteLogo.svg" alt="")
+            ul.footer__contacts
+                li.footer__contactItem
+                    <i class="fas fa-map-marker-alt"></i>
+                    | 1410&nbsp;Jarvis&nbsp;Ave, Elk&nbsp;Grove&nbsp;Village,  IL&nbsp;60007
+                li.footer__contactItem
+                    <i class="fas fa-clock"></i>
+                    | Mon–Fri&nbsp;(Sat) | 9am&nbsp;–&nbsp;5pm&nbsp;(3pm)
+                li.footer__contactItem
+                    <i class="footer__contactIco  footer__contactIco-phone  fas fa-phone"></i>
+                    | (888)&nbsp;906-3317
+        nav.footer__nav.footerNav
+            ul.footerNav__list
+                li.footerNav__item
+                    a.footerNav__link(href="#")
+                        | About Us
+                    ul.footerNav__subList
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | Process
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | Projects
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | Warranty
+                li.footerNav__item
+                    a.footerNav__link(href="#")
+                        | Stones
+                    ul.footerNav__subList
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | Sinks
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | Edges
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | Cabinets
+                li.footerNav__item
+                    a.footerNav__link(href="#")
+                        | Specials
+                    ul.footerNav__subList
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | Remnants Sale
+                li.footerNav__item
+                    a.footerNav__link(href="#")
+                        | Resources
+                    ul.footerNav__subList
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | FAQ
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | Blog
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | Design Visualizer
+                li.footerNav__item
+                    a.footerNav__link(href="#")
+                        | Contact Us
+                    ul.footerNav__subList
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | Instant Quote
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | For Contractors
+                        li.footerNav__subItem
+                            a.footerNav__subLink(href="#")
+                                | Schedule Measurements
+    .footer__cellar.footerCellar
+        .footerCellar__inner
+            p.footerCellar__copyright
+                | © 2018 Granite Selection. All rights reserved. Designed by
+                a.footerCellar__copyrightLink(href="#")
+                    | Comrade Web Agency.
+            
+            - var footerCellar__socialsClass = "footerCellar__socials"
+            include ../socials/socials.pug
+            +socials__mixin(footerCellar__socialsClass)

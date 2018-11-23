@@ -1,0 +1,291 @@
+.footer {
+    position: relative;
+    z-index: 99;
+
+    font: 600 14px/1.2 "SourceSansPro", sans-serif;
+    color: rgba($white, .45);
+
+    background-color: $darkgrey-1;
+
+    &::before {
+        content: "";
+
+        display: block;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+
+        background: url("../img/content/footer/footer__bgOverlay.png");
+        opacity: .4;
+    }
+}
+
+.footer__inner {
+    padding: 40px 30px 0;
+
+    position: relative;
+    z-index: 101;
+
+    @media (min-width: $grid-sl) {
+        padding: 40px 30px 10px;
+    }
+
+    @media (min-width: $grid-ls) {
+        padding: 70px 100px 80px;
+    }
+
+    @media (min-width: $grid-lm) {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 70px 100px 90px;
+
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer__head {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (min-width: $grid-sl) {
+        justify-content: flex-start;
+    }
+
+    @media (min-width: $grid-lm) {
+        width: 290px;
+        margin: 0 20px 0 0;
+
+        flex-direction: column;
+        flex-wrap: nowrap;
+        flex: 0 0 auto;
+    }
+}
+
+.footer__logoLink {
+    width: 180px;
+    height: 65px;
+    margin: 0 0 30px;
+
+    display: block;
+
+    transition: .3s;
+
+    &:hover, 
+    &:active {
+        opacity: .3;
+    }
+
+    @media (min-width: $grid-ls) {
+        margin: 0 0 24px;
+    }
+}
+
+.footer__contacts {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @media (min-width: $grid-sl) {
+        margin: 0 0 0 30px;
+    }
+
+    @media (min-width: $grid-lm) {
+        margin: 0;
+    }
+}
+
+.footer__contactItem {
+    &:not(:last-child) {
+        margin: 0 0 10px;
+    }
+
+    i {
+        margin: 0 15px 0 0;
+
+        color: rgba($white, .2);
+    }
+
+    @media (min-width: $grid-ls) {
+        &:not(:last-child) {
+            margin: 0 0 15px;
+        }
+    }
+}
+
+
+
+.footerNav__list {
+    margin: 30px 0 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    flex: 1 0 auto;
+
+    list-style: none;
+
+    @media (min-width: $grid-lm) {
+        margin: 40px 0 0;
+    }
+}
+
+.footerNav__item {
+    width: 120px;
+    margin: 0 10px 30px 0;
+
+    &:last-child {
+        width: 170px;
+        margin: 0 0 30px 0;
+    }
+
+    @media (min-width: $grid-sl) {
+        width: 130px;
+        margin: 0 20px 30px 0;
+
+        &:last-child {
+            width: 170px;
+            margin: 0 0 30px 0;
+        }
+    }
+
+    @media (min-width: $grid-ls) {
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    @media (min-width: $grid-lm) {
+        width: auto;
+        
+        &:not(:last-child) {
+            margin: 0 60px 0 0;
+        }
+    }
+}
+
+.footerNav__link {
+    font: 700 14px/1.2 "BrandonGrotesque", sans-serif;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+
+    transition: .3s;
+
+    &:hover,
+    &:active {
+        opacity: .3;
+    }
+}
+
+.footerNav__subList {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.footerNav__subItem {
+    margin: 15px 0 0;
+
+    &:first-child {
+        margin: 18px 0 0;
+    }
+}
+
+.footerNav__subLink {
+    font: 600 15px/1.2 "SourceSansPro", sans-serif;
+    color: rgba($white, .7);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+
+    transition: .3s;
+
+    &:hover,
+    &:active {
+        color: rgba($white, 1);
+    }
+}
+
+.footerCellar {
+    position: relative;
+
+    &::after {
+        content: "";
+
+        display: block;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+
+        background-color: rgba($darkgrey-2, .6);
+    }
+}
+
+.footerCellar__inner {
+    padding: 20px 30px 40px;
+
+    position: relative;
+    z-index: 101;
+
+    @media (min-width: $grid-sl) {
+        padding: 20px 30px;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media (min-width: $grid-ls) {
+        padding: 15px 100px;
+    }
+
+    @media (min-width: $grid-lm) {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+.footerCellar__copyright {
+    margin: 0 0 30px;
+
+    @media (min-width: $grid-sl) {
+        margin: 0;
+
+        display: flex;
+    }
+}
+
+.footerCellar__copyrightLink {
+    margin: 5px 0 0;
+
+    display: block;
+
+    font: inherit;
+    color: $white;
+    text-decoration: none;
+
+    transition: .3s;
+
+    &:hover,
+    &:active {
+        opacity: .3;
+    }
+
+    @media (min-width: $grid-sl) {
+        margin: 0 0 0 5px;
+    }
+}

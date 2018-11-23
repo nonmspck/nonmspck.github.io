@@ -1,0 +1,28 @@
+.socials__list {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    list-style: none;
+}
+
+.socials__item {
+    &:not(:last-child) {
+        margin: 0 24px 0 0;
+    }
+}
+
+.socials__link {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba($white, .45);
+    text-decoration: none;
+
+    transition: .3s;
+
+    &:hover,
+    &:active {
+        color: $white;
+    }
+}
