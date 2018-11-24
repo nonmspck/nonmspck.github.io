@@ -12,7 +12,7 @@ body {
     font-family: "SourceSansPro", sans-serif;
     font-weight: 400;
 
-    @media (min-width: $grid-sl) {
+    @media (min-width: $grid-ls) {
         padding: 145px 0 0;
     }
 }
@@ -45,5 +45,23 @@ input {
     &:hover,
     &:active {
         opacity: .5;
+    }
+}
+
+.link {
+    font: 600 13px/1.2 "SourceSansPro", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+
+    transition: .3s;
+
+    &:hover,
+    &:active {
+        opacity: .3;
+    }
+
+    span {
+        margin: 0 0 0 8px;
     }
 }

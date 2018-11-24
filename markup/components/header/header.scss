@@ -19,6 +19,14 @@
 
     background-color: $darkgrey-1;
 
+    &-jsHide {
+        display: none;
+
+        @media (min-width: $grid-ls) {
+            display: block;
+        }
+    }
+
     @media (min-width: $grid-sl) {
         width: 50%;
     }
@@ -307,7 +315,149 @@
 }
 
 .headerNav__subList {
-    display: none;
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+
+    font-size: .8em;
+
+    background-color: rgba($darkgrey-1, .05);
+    list-style: none;
+
+    @media (min-width: $grid-lm) {
+        width: 520px;
+        padding: 30px 50px 30px 30px;
+        border-top: 4px solid $orange-1;
+
+        display: flex;
+
+        position: absolute;
+        top: 100%;
+
+        background-color: rgba($white, .98);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    &-jsHide {
+        display: none;
+    }
+
+    &::after {
+        content: "";
+
+        display: block;
+
+        width: 85%;
+        height: 1px;
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-color: rgba($darkgrey-1, .05);
+    }
+}
+
+.headerNav__subCol {
+    padding: 30px 50px;
+
+    position: relative;
+
+    &:not(:last-child) {
+        &::after {
+            content: "";
+
+            display: block;
+
+            width: 85%;
+            height: 1px;
+
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            background-color: rgba($darkgrey-1, .05);
+
+            @media (min-width: $grid-lm) {
+                display: none;
+            }
+        }
+    }
+
+    @media (min-width: $grid-lm) {
+        margin: 0 30px 0 0;
+        padding: 0;
+
+        flex: 0 0 auto;
+
+    }
+}
+
+.headerNav__subLead {
+    font: 700 13px/1.2 "BrandonGrotesque", sans-serif;
+    color: rgba($darkgrey-1, .3);
+    letter-spacing: 0.4px;
+}
+
+.headerNav__subColList {
+    margin: 0;
+    padding: 10px 20px;
+
+    list-style: none;
+
+    @media (min-width: $grid-lm) {
+        padding: 10px 0;
+    }
+}
+
+.headerNav__subColItem {
+    display: flex;
+    align-items: center;
+
+    margin: 8px 0;
+}
+
+.headerNav__subItemIco {
+    margin: 0 12px 0 0;
+}
+
+.headerNav__subItemText {
+    margin: 0;
+
+    font: 700 14px/1.2 "BrandonGrotesque", sans-serif;
+    color: $darkgrey-1;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+
+    transition: .3s;
+
+    &:hover,
+    &:active {
+        opacity: .3;
+    }
+}
+
+.headerNav__subLink {
+    font: 600 13px/1.2 "SourceSansPro", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+    color: $orange-1;
+
+    transition: .3s;
+
+    &:hover,
+    &:active {
+        opacity: .3;
+    }
+
+    span {
+        margin: 0 0 0 8px;
+    }
 }
 
 .headerNav__navWrap {
@@ -324,6 +474,14 @@
     background-color: $white;
     overflow-y: auto;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+
+    &-jsHide {
+        display: none;
+
+        @media (min-width: $grid-lm) {
+            display: block;
+        }
+    }
 
     @media (min-width: $grid-sl) {
         width: 50%;
@@ -362,11 +520,59 @@
     }
 }
 
+.headerNav__navItem {
+    &:not(:last-child) {
+        .headerNav__navLink {
+            &::after {
+                content: "";
+
+                display: block;
+
+                width: 85%;
+                height: 1px;
+
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+
+                background-color: rgba($darkgrey-1, .1);
+
+                @media (min-width: $grid-lm) {
+                    display: none;
+                }
+            }
+
+            &-popupStones { 
+                @media (min-width: $grid-lm) {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &-sub {
+        position: relative;
+
+        &:hover {
+            @media (min-width: $grid-lm) {
+                .headerNav__subList {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
 .headerNav__navLink {
     width: 100%;
     padding: 25px 0 25px 0;
 
     display: block;
+
+    position: relative;
 
     font: inherit;
     color: $darkgrey-1;
@@ -374,15 +580,44 @@
     text-transform: uppercase;
     text-align: center;
 
-    transition: .3s;
+    transition: .1s;
 
     &:hover, 
     &:active {
-        opacity: .3;
+        color: rgba($darkgrey-1, .3);
+    }
+
+    &-popupStones {
+        span {
+            margin: 2px 0 0 5px;
+
+            position: absolute;
+            transform: rotate(180deg);
+
+            transition: .3s;
+
+            @media (min-width: $grid-lm) {
+                // display: none;
+            }
+        }
+    }
+
+    &-open {
+        span {
+            margin: 0 0 0 5px;
+
+            transform: rotate(90deg);
+        }
     }
 
     @media (min-width: $grid-lm) {
         padding: 15px;
+
+        position: static;
+
+        &::after {
+            display: none;
+        }
     }
 }
 
@@ -396,9 +631,14 @@
 
     background-color: rgba(0, 0, 0, 0.4);
     transition: .3s;
+    cursor: pointer;
 
     &:hover {
         opacity: .5;
+    }
+
+    &-jsHide {
+        display: none;
     }
 
     @media (min-width: $grid-sl) {
@@ -450,15 +690,5 @@
 
     &::after {
         transform: rotate(-45deg);
-    }
-}
-
-// .headerRoof,
-// .headerNav__navWrap,
-.headerNav__overlay {
-    // display: none;
-
-    @media (min-width: $grid-lm) {
-        display: none;
     }
 }
