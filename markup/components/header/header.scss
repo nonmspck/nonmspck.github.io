@@ -4,6 +4,8 @@
     right: 0;
     left: 0;
     z-index: 101;
+
+    transition: .3s;
 }
 
 .headerRoof {
@@ -18,6 +20,7 @@
     color: rgba($white, .45);
 
     background-color: $darkgrey-1;
+    transition: .3s;
 
     &-jsHide {
         display: none;
@@ -36,6 +39,12 @@
         height: 45px;
 
         position: static;
+    }
+    
+    &-jsScroll {
+        @media (min-width: $grid-ls) {
+            display: none;
+        }
     }
 }
 
@@ -151,10 +160,16 @@
     justify-content: space-between;
     align-items: center;
 
+    transition: .3s;
+
     @media (min-width: $grid-ls) {
         max-width: 1440px;
         margin: 0 auto;
         padding: 0 100px 0 170px;
+
+        &-jsScroll {
+            height: 80px;
+        }
     }
 }
 
@@ -188,6 +203,15 @@
             background-color: $white;
         }
     }
+
+    &-jsScroll {
+        @media (min-width: $grid-ls) {
+            &::before {
+                width: 320px;
+                transform: translateX(-50px) skewX(-25deg);
+            }
+        }
+    }
 }
 
 .headerNav__logoLink {
@@ -207,6 +231,14 @@
         position: relative;
         top: -20px;
         z-index: 101;
+
+        &-jsScroll {
+            width: 160px;
+            height: 58px;
+
+            top: 0;
+            left: 25px;
+        }
     }
 }
 
@@ -488,10 +520,11 @@
     }
 
     @media (min-width: $grid-ls) {
-        width: 30%;
+        width: 282px;
 
         top: 145px;
         bottom: 0;
+        left: 100px;
     }
 
     @media (min-width: $grid-lm) {
@@ -502,6 +535,15 @@
 
         box-shadow: none;
         overflow-y: visible;
+    }
+
+    &-jsScroll {
+        @media (min-width: $grid-ls) {
+            width: 322px;
+
+            top: 80px;
+            left: 100px;
+        }
     }
 }
 
@@ -646,13 +688,23 @@
     }
 
     @media (min-width: $grid-ls) {
-        width: 70%;
-
+        width: 100%;
+        
         top: 145px;
     }
 
     @media (min-width: $grid-lm) {
         display: none;
+    }
+
+    &-jsScroll {
+        @media (min-width: $grid-ls) {
+            top: 80px;
+
+            .headerNav__closeOverlay {
+                left: 440px;
+            }
+        }
     }
 }
 
@@ -690,5 +742,9 @@
 
     &::after {
         transform: rotate(-45deg);
+    }
+
+    @media (min-width: $grid-ls) {
+        left: 400px;
     }
 }
