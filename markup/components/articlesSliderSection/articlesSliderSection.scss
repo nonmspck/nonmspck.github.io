@@ -1,0 +1,148 @@
+.articlesSliderSection {
+    border: 1px solid rgba($lightgrey-2, 0.5);
+
+    font: 400 16px/1.6 "SaurceSansPro", sans-serif;
+
+    background-color: rgba($lightgrey-2, .05);
+}
+
+.articlesSliderSection__inner {
+    padding: 40px 0;
+
+    @media (min-width: $grid-ls) {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 80px 70px;
+    }
+}
+
+.articlesSliderSection__head {
+    margin: 0 0 30px;
+    padding: 0 30px;
+
+    @media (min-width: $grid-sl) {
+        margin: 0 0 40px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    @media (min-width: $grid-ls) {
+        margin: 0 0 50px;
+    }
+}
+
+.articlesSliderSection__heading {
+    margin: 0 0 15px;
+
+    color: $darkgrey-1;
+}
+
+.articlesSliderSection__lead {
+    font: 400 19px/1.5 "SourceSansPro", sans-serif;
+    color: rgba($darkgrey-1, .5);
+}
+
+.articlesSliderSection__btn {
+    margin: 15px 0 0;
+}
+
+.articlesSlider {
+    position: relative;
+}
+
+.articlesSlider__slide {
+    padding: 0 30px;
+}
+
+.articlesSlider__controls {
+
+}
+
+.articlesSlider__btn {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: none;
+
+    position: absolute;
+    top: 25%;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: $white;
+    transition: .3s;
+
+    &::after {
+        content: "";
+
+        display: block;
+        width: 30px;
+        height: 22px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background: url("../img/content/articlesSlider/articlesSlider__chevronUp.svg") no-repeat center center;
+    }
+
+    &:hover {
+        opacity: .5;
+    }
+
+    &-prev {
+        left: 0;
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(-90deg);
+        }
+    }
+
+    &-next {
+        right: 0;
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+    }
+
+    @media (min-width: $grid-ls) {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.articlesSlider__img {
+    width: 100%;
+}
+
+.articlesSlider__textWrap {
+    margin: 24px 0 0;
+}
+
+.articlesSlider__postHeading {
+    margin: 0;
+
+    font: 700 18px/1.2 "BrandonGrotasque", sans-serif;
+    color: $darkgrey-1;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.articlesSlider__postText {
+    margin: 12px 0 16px;
+
+    color: $darkgrey-3;
+}
+
+.articlesSlider__postLink {
+    font: 700 14px/2 "BrandonGrotesque", sans-serif;
+    color: $blue-1;
+    letter-spacing: 0.5px;
+}
+
+.slick-slide {
+    
+}
