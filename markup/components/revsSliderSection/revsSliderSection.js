@@ -1,6 +1,6 @@
-var $articlesSlider = $(".revsSlider");
+var $revsSlider = $(".revsSlider");
 
-$articlesSlider.slick({
+$revsSlider.slick({
     slidesToScroll: 1,
     slidesToShow: 1,
     focusOnSelect: true,
