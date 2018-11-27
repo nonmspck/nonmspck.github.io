@@ -1,0 +1,60 @@
+.bannerKitchenSection {
+    position: relative;
+
+    background: 
+        url("../img/content/bannerKitchen/bannerKitchen__bgr.jpg") no-repeat center center;
+    background-size: cover;
+
+    &::before {
+        content: "";
+
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+
+        font: 400 16px/1.6 "SourceSansPro", sans-serif;
+        color: rgba($white, .8);
+
+        background-color: rgba($blue-1, .8);
+    }
+}
+
+.bannerKitchenSection__inner {
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 40px 30px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 101;
+
+    @media (min-width: $grid-ls) {
+        padding: 80px 0;
+    }
+}
+
+.bannerKitchenSection__lead {
+    font: 700 32px/1.5 "BrandonGrotesque", sans-serif;
+    color: $white;
+    text-transform: uppercase;
+}
+
+.bannerKitchenSection__text {
+    margin: 16px 0 24px;
+
+    font: inherit;
+    color: rgba($white, .8);
+}
+
+.bannerKitchenSection__link {
+    font: 700 16px/1.6 "BrandonGrotesque", sans-serif;
+    color: $white;
+    letter-spacing: 0.5px;
+}

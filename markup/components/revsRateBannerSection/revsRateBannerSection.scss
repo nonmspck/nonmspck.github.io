@@ -1,0 +1,120 @@
+.revsRateBannerSection {
+    background-color: $white;
+}
+
+.revsRateBannerSection__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @media (min-width: $grid-lm) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.revsRateBannerSection__item {
+    padding: 40px 0;
+
+    position: relative;
+
+    text-align: center;
+
+    &:not(:last-child) {
+        &::after {
+            content: "";
+
+            display: block;
+
+            width: 300px;
+            height: 2px;
+
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba($lightgrey-2, .3);
+
+            @media (min-width: $grid-ls) {
+                width: 450px;
+            }
+
+            @media (min-width: $grid-lm) {
+                width: 2px;
+                height: 50%;
+
+                top: 50%;
+                right: 0;
+                bottom: auto;
+                left: auto;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    @media (min-width: $grid-ls) {
+        padding: 60px 0;
+    }
+
+    @media (min-width: $grid-lm) {
+        padding: 60px 90px;
+    }
+}
+
+.revsRateBannerSection__itemHead {
+    margin: 0 0 27px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.revsRateBannerSection__logoWrap {
+    margin: 0 20px 0 0;
+}
+
+.revsRateBannerSection__rateWrap {
+    display: flex;
+}
+
+.revsRateBannerSection__rate {
+    font: 700 12px/1.2 "SourceSansPro", sans-serif;
+    text-transform: uppercase;
+    color: $darkgrey-3;
+}
+
+.revsRateBannerSection__stars {
+    margin: 0 5px 0 0;
+
+    display: flex;
+}
+
+.revsRateBannerSection__star {
+    width: 16px;
+    height: 15px;
+
+    display: block;
+
+    &-full {
+        background: url("../img/content/revsRate/starFull.svg") no-repeat center center;
+    }
+    
+    &-half {
+        background: url("../img/content/revsRate/starHalf.svg") no-repeat center center;
+    }
+
+    &-empty {
+        background: url("../img/content/revsRate/starEmpty.svg") no-repeat center center;
+    }
+
+    &:not(::last-child) {
+        margin: 0 2px 0 0;
+    }
+}
+
+.revsRateBannerSection__link {
+    font: 700 16px/1.6 "BrandonGrotesque", sans-serif;
+    color: $blue-1;
+}

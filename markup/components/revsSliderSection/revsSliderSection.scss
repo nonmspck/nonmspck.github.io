@@ -1,0 +1,176 @@
+.revsSliderSection {
+    font: 400 18px/1.6 "SourceSansPro", sans-serif;
+    color: rgba($white, .7);
+
+    background: $darkgrey-1;
+}
+
+.revsSliderSection__inner {
+    padding: 40px 30px;
+
+    position: relative;
+
+    &::before {
+        content: "";
+
+        height: 100%;
+
+        display: block;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 99;
+        background: url("../img/content/revsSlider/revsSlider__bgrLogo.svg") no-repeat center center;
+        background-size: cover;
+
+        @media (min-width: $grid-ls) {
+            right: 100px;
+            left: 100px;
+        }
+    }
+
+    @media (min-width: $grid-ls) {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 100px 100px 80px;
+
+    }
+}
+
+.revsSliderSection__slider {
+    position: relative;
+    z-index: 101;
+}
+
+.revsSlider__slideInner {
+    @media (min-width: $grid-ls) {
+        padding: 0 30px;
+    }
+
+    @media (min-width: $grid-lm) {
+        padding: 0 100px 0 30px;
+
+        display: flex;
+        align-items: center;
+    }
+}
+
+.revsSlider__personInfo {
+    padding: 10px 0 0 20px;
+
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+
+    position: relative;
+
+    &::before {
+        content: "";
+
+        display: block;
+
+        width: 35px;
+        height: 50px;
+
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        background: url("../img/content/revsSlider/quote.svg") no-repeat center center;
+    }
+
+    @media (min-width: $grid-ls) {
+        padding: 10px 0 0 40px;
+
+        &::before {
+            width: 50px;
+            height: 60px;
+        }
+    }
+
+    @media (min-width: $grid-lm) {
+        max-width: 290px;
+        margin: 0 70px 0 0;
+    }
+}
+
+.revsSlider__imgWrap {
+    width: 70px;
+    height: 70px;
+    margin: 0 20px 0 0;
+
+    border-radius: 50%;
+
+    @media (min-width: $grid-ls) {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.revsSlider__img {
+    width: 100%;
+    height: auto;
+}
+
+.revsSlider__personName {
+    font: 700 18px/1.6 "SourceSansPro", sans-serif;
+    color: $white;
+}
+
+.revsSlider__text {
+    margin: 20px 0 0;
+
+    font-style: italic;
+
+    @media (min-width: $grid-lm) {
+        margin: 0;
+    }
+}
+
+.revsSliderSection__controls {
+    margin: 20px 0 0;
+
+    position: relative;
+    z-index: 101;
+
+    @media (min-width: $grid-ls) {
+        margin: 20px 0 0 30px;
+    }
+
+    @media (min-width: $grid-lm) {
+        margin: 45px 0 0 380px;
+    }
+}
+
+.revsSliderSection__btn {
+    width: 28px;
+    height: 24px;
+    border: none;
+
+    position: relative;
+
+    background: url("../img/content/revsSlider/arrowUp.svg") no-repeat center center;
+    transition: .3s;
+
+    &:not(:last-child) {
+        margin: 0 24px 0 0;
+    }
+
+    &:hover {
+        opacity: .5;
+    }
+
+    &-prev {
+        transform: rotate(-90deg);
+    }
+
+    &-next {
+        transform: rotate(90deg);
+    }
+
+    &.slick-disabled {
+        opacity: .3;
+    }
+}
