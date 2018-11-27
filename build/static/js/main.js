@@ -3096,6 +3096,7 @@ $articlesSlider.slick({
 "use strict";
 "use strict";
 "use strict";
+"use strict";
 
 $(document).ready(function () {
     $(".headerNav__btn-open").click(function (event) {
@@ -3169,6 +3170,19 @@ $(window).scroll(function () {
         $('.headerNav__logoWrap').removeClass('headerNav__logoWrap-jsScroll');
         $('body').removeClass('bodyJsScroll');
     }
+});
+"use strict";
+"use strict";
+
+var $articlesSlider = $(".revsSlider");
+
+$articlesSlider.slick({
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    focusOnSelect: true,
+    infinite: false,
+    prevArrow: ".revsSliderSection__btn-prev",
+    nextArrow: ".revsSliderSection__btn-next"
 });
 "use strict";
 "use strict";
