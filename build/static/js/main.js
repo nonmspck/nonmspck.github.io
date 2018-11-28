@@ -3218,6 +3218,7 @@ $(window).scroll(function () {
 "use strict";
 "use strict";
 "use strict";
+"use strict";
 
 var $projectsSlider = $(".projectsSlider__inner");
 

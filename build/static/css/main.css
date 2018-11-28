@@ -8361,6 +8361,7 @@ input {
 
 .approachSliderSection__btn.slick-disabled {
   opacity: .2;
+  cursor: default;
 }
 
 .approachSliderSection__btn:hover {
@@ -8435,10 +8436,12 @@ input {
   letter-spacing: 0.5px;
 }
 
-.approachDescrSlider .slick-slide.slick-current:last-child {
-  position: relative;
-  -webkit-transform: translateX(-30%);
-          transform: translateX(-30%);
+@media (min-width: 960px) {
+  .approachDescrSlider .slick-slide.slick-current:last-child {
+    position: relative;
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+  }
 }
 
 @media (min-width: 960px) {
@@ -10410,6 +10413,175 @@ input {
   margin: 0 2px 0 0;
 }
 
+.pageHeadSection {
+  border-bottom: 6px solid #e5493a;
+  position: relative;
+  font: 600 18px/1.6 "SourceSansPro", sans-serif;
+  color: #ffffff;
+  background: url("../img/content/pageHead/pageHead__bgrImg.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.pageHeadSection::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(34, 35, 45, 0.5);
+}
+
+.pageHeadSection__inner {
+  padding: 40px 30px;
+  position: relative;
+  z-index: 101;
+}
+
+.pageHeadSection__inner::after {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 1240px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: url("../img/content/pageHead/pageHead__bgrLogo.png") no-repeat center right;
+  background-size: cover;
+}
+
+@media (min-width: 960px) {
+  .pageHeadSection__inner::after {
+    width: auto;
+    right: 100px;
+    left: 100px;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pageHeadSection__inner::after {
+    left: 370px;
+  }
+}
+
+@media (min-width: 768px) {
+  .pageHeadSection__inner {
+    height: 600px;
+    padding: 0 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 960px) {
+  .pageHeadSection__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+  }
+}
+
+.pageHeadSection__textWrap {
+  position: relative;
+  z-index: 101;
+}
+
+.pageHeadSection__lead {
+  font: 700 42px/1.1 "BrandonGrotesque", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.pageHeadSection__text {
+  max-width: 420px;
+  margin: 12px 0 16px;
+}
+
+@media (min-width: 768px) {
+  .pageHeadSection__text {
+    width: 420px;
+  }
+}
+
+@media (min-width: 768px) {
+  .pageHeadSection__btnWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.pageHeadSection__btn span {
+  margin: 0 0 0 8px;
+}
+
+.pageHeadSection__videoBtn {
+  width: 176px;
+  height: 52px;
+  margin: 16px 0 0;
+  display: block;
+  position: relative;
+  background-color: #22232d;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.pageHeadSection__videoBtn:hover {
+  opacity: .3;
+}
+
+.pageHeadSection__videoBtn::after {
+  content: "";
+  display: block;
+  border-left: 16px solid #ffffff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 2px;
+}
+
+@media (min-width: 768px) {
+  .pageHeadSection__videoBtn {
+    margin: 0 0 0 16px;
+  }
+}
+
+@media (min-width: 960px) {
+  .pageHeadSection__videoBtn {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 1280px) {
+  .pageHeadSection__videoBtn {
+    right: 175px;
+  }
+}
+
 .presPostBannerSection {
   font: 400 16px/1.6 "SourceSansPro", sans-serif;
   color: #333f4b;
@@ -10499,6 +10671,7 @@ input {
 
 @media (min-width: 768px) {
   .presPostBannerSection__textWrap {
+    width: 600px;
     margin: 0;
     padding: 0 40px 0 60px;
     display: -webkit-box;

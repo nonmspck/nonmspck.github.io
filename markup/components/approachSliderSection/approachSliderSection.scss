@@ -70,6 +70,7 @@
 
     &.slick-disabled {
         opacity: .2;
+        cursor: default;
     }
 
     &:hover {
@@ -138,8 +139,10 @@
 
 .approachDescrSlider {
     .slick-slide.slick-current:last-child {
-        position: relative;
-        transform: translateX(-30%);
+        @media (min-width: $grid-ls) {
+            position: relative;
+            transform: translateX(-30%);
+        }
     }
 
     .slick-slide:not(.slick-current) {
