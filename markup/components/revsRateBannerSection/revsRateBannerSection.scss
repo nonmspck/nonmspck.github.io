@@ -8,7 +8,7 @@
 
     list-style: none;
 
-    @media (min-width: $grid-lm) {
+    @media (min-width: $grid-ls) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -37,11 +37,11 @@
             transform: translateX(-50%);
             background-color: rgba($lightgrey-2, .3);
 
-            @media (min-width: $grid-ls) {
+            @media (min-width: $grid-sl) {
                 width: 450px;
             }
 
-            @media (min-width: $grid-lm) {
+            @media (min-width: $grid-ls) {
                 width: 2px;
                 height: 50%;
 
@@ -54,8 +54,12 @@
         }
     }
 
-    @media (min-width: $grid-ls) {
+    @media (min-width: $grid-sl) {
         padding: 60px 0;
+    }
+
+    @media (min-width: $grid-ls) {
+        padding: 60px 30px;
     }
 
     @media (min-width: $grid-lm) {

@@ -3,7 +3,7 @@ var $articlesSlider = $(".articlesSlider__sliderInner");
 $articlesSlider.slick({
     slidesToScroll: 1,
     slidesToShow: 3,
-    focusOnSelect: true,
+    focusOnSelect: false,
     prevArrow: ".articlesSlider__btn-prev",
     nextArrow: ".articlesSlider__btn-next",
     responsive: [

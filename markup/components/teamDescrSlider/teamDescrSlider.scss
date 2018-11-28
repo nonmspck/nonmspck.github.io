@@ -5,6 +5,7 @@
     color: $darkgrey-3;
 
     background-color: rgba($lightgrey-2, .1);
+    overflow-x: hidden;
 
     @media (min-width: $grid-ls) {
         background: linear-gradient(to right, $white 0%, $white 50%, rgba($lightgrey-2, .1) 50%, rgba($lightgrey-2, .1) 100%);
@@ -80,16 +81,21 @@
     }
 }
 
-.headSlider .slick-current .headSlider__text {
-    color: rgba($darkgrey-1, 1);
-}
+.headSlider {
+    .slick-current .headSlider__text {
+        color: rgba($darkgrey-1, 1);
+    }
 
-.headSlider .slick-current .headSlider__text::after {
-    display: block;
+    .slick-current .headSlider__text::after {
+        display: block;
+    }
+
+    .slick-slide:not(.slick-current) {
+        cursor: pointer;
+    }
 }
 
 .teamSlider__slideInner {
-
     @media (min-width: $grid-ls) {
         display: flex;
         justify-content: space-between;

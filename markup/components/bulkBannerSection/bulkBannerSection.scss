@@ -1,0 +1,56 @@
+.bulkBannerSection {
+    position: relative;
+    
+    font: 400 16px/1.6 "SourceSansPro", sans-serif;
+    color: rgba($white, .8);
+    text-align: center;
+
+    background: url("../img/content/bulkBanner/bulkBanner__bgr.jpg") no-repeat center center;
+    background-size: cover;
+
+    &::before {
+        content: "";
+
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+
+        background-color: rgba($darkgrey-1, .8);
+    }
+}
+
+.bulkBannerSection__inner {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 30px;
+
+    position: relative;
+    z-index: 101;
+
+    @media (min-width: $grid-ls) {
+        padding: 60px 0;
+    }
+}
+
+.bulkBannerSection__lead {
+    font: 700 32px/1.3 "BrandonGrotesque", sans-serif;
+    color: $white;
+    text-transform: uppercase;
+}
+
+.bulkBannerSection__text {
+    margin: 14px 0 25px;
+}
+
+.bulkBannerSection__link {
+    font: 700 16px/1.6 "BrandonGrotesque", sans-serif;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}

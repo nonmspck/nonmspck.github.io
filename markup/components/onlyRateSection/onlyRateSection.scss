@@ -1,0 +1,99 @@
+.onlyRateSection {
+    background-color: $white;
+}
+
+.onlyRateSection__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @media (min-width: $grid-sl) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    @media (min-width: $grid-ls) {
+        padding: 0 100px;
+    }
+
+    @media (min-width: $grid-lm) {
+        padding: 0;
+    }
+}
+
+.onlyRateSection__item {
+    padding: 40px 0;
+
+    position: relative;
+
+    text-align: center;
+
+    @media (min-width: $grid-sl) {
+        width: 50%;
+        padding: 45px 0;
+    }
+
+    @media (min-width: $grid-ls) {
+        padding: 45px 30px;
+    }
+
+    @media (min-width: $grid-lm) {
+        width: auto;
+        padding: 45px 45px 30px;
+    }
+}
+
+.onlyRateSection__itemHead {
+    margin: 0 0 27px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.onlyRateSection__logoWrap {
+    margin: 0 20px 0 0;
+}
+
+.onlyRateSection__rateWrap {
+    display: flex;
+}
+
+.onlyRateSection__rate {
+    font: 700 12px/1.2 "SourceSansPro", sans-serif;
+    text-transform: uppercase;
+    color: $darkgrey-3;
+}
+
+.onlyRateSection__stars {
+    margin: 0 5px 0 0;
+
+    display: flex;
+}
+
+.onlyRateSection__star {
+    width: 16px;
+    height: 15px;
+
+    display: block;
+
+    &-full {
+        background: url("../img/content/onlyRate/starFull.svg") no-repeat center center;
+    }
+    
+    &-half {
+        background: url("../img/content/onlyRate/starHalf.svg") no-repeat center center;
+    }
+
+    &-empty {
+        background: url("../img/content/onlyRate/starEmpty.svg") no-repeat center center;
+    }
+
+    &:not(::last-child) {
+        margin: 0 2px 0 0;
+    }
+}
+
