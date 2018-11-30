@@ -12,6 +12,17 @@ html(class="no-js", lang="en")
 
         main.pageContent
 
+            -
+                var what = "inner"
+                var imgPath = ""
+                var remnantsInnerHeadPath = {
+                    heading: "23x38 Gray Expo Silestone Remnant",
+                    list: ["Home", "Remnants", "Silestone", "Gray, Silver", "Grey Expo "]
+                }
+
+            include ../components/pageHeadSection/pageHeadSection.pug
+            +pageHead__mixin(what, imgPath, remnantsInnerHeadPath)
+
             //- include ../components
 
         include ../components/footer/footer.pug

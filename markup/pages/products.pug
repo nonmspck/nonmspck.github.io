@@ -12,6 +12,23 @@ html(class="no-js", lang="en")
 
         main.pageContent
 
+            -
+                var what = "catalog"
+                var imgPath = "static/img/content/productsHead/productsHead__bgr.jpg"
+                var remnantsHeadPath = {
+                    heading: "MSI Q Quartz Countertops",
+                    list: ["Home", "Stones", "MSI Q Quartz"]
+                }
+                var remnantsHeadContent = {
+                    lead: "What Are Quartz Countertops?",
+                    text: "<span>Quartz is one of the most reliable materials we use for kitchen and bathroom countertops. It is a permanent stone, which lasts a lifetime for customers.</span><span>Additionally, quartz is also a flexible material that is easier to install. The strength, durability, and flexibility are due to a composition of 93% quartz and 7% resin. In fact, quartz is stronger than natural stones like granite and marble.</span><span>Sophisticated yet practical, Quartz countertops are scratch, stain, and heat resistant. Eternally beautiful while impressively durable, Q Premium Natural Quartz is the latest in advanced quartz countertop surfaces from MSI.</span>",
+                    foo: "<a class='link' href='#'>View Stones<span>→</span></a>",
+                    bannerLead: ""
+                }
+
+            include ../components/pageHeadSection/pageHeadSection.pug
+            +pageHead__mixin(what, imgPath, remnantsHeadPath, remnantsHeadContent)
+
             //- include ../components
 
         include ../components/footer/footer.pug        

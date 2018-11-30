@@ -1,13 +1,60 @@
-section.pageHeadSection
-    .pageHeadSection__inner
-        //- .pageHeadSection__pathWrap for inner
-        .pageHeadSection__textWrap
-            b.pageHeadSection__lead
-                | OVER 14,000 SLABS IN STOCK
-            p.pageHeadSection__text
-                | The Largest Selection of Kitchen Granite, Marbel and Quartz Countertop Stones in Chicagoland
-            .pageHeadSection__btnWrap
-                a.pageHeadSection__btn.btn(href="#")
-                    | View Stones
-                    span →
-                a.pageHeadSection__videoBtn(href="#")
+mixin pageHead__pathMixin(pathItem)
+    li.pageHeadSection__pathItem
+        a(href="#")
+            | #{pathItem}
+
+//- path: {heading: , list: }
+//- types of pages: catalog, catalog-inner(inner), index
+
+mixin pageHead__mixin(type, img, path, content)
+    - 
+        if (img)
+            var headBgrStyle = "background: url('" + img + "') no-repeat center center; background-size: cover;"
+
+    if (type == "index")
+        section.pageHeadSection
+            .pageHeadSection__inner
+                .pageHeadSection__textWrap
+                    b.pageHeadSection__lead
+                        | OVER 14,000 SLABS IN STOCK
+                    p.pageHeadSection__text
+                        | The Largest Selection of Kitchen Granite, Marbel and Quartz Countertop Stones in Chicagoland
+                    .pageHeadSection__btnWrap
+                        a.pageHeadSection__btn.btn(href="#")
+                            | View Stones
+                            span →
+                        a.pageHeadSection__videoBtn(href="#")
+    else if (type == "catalog")
+        section.pageHeadSection.pageHeadSection-catalog(style=headBgrStyle)
+            .pageHeadSection__pathWrap
+                .pageHeadSection__path
+                    h1.pageHeadSection__pathHeading
+                        != path.heading
+                    ul.pageHeadSection__pathList
+                        each item in path.list
+                            +pageHead__pathMixin(item)
+            .pageHeadSection__inner.pageHeadSection__inner-catalog
+                .pageHeadSection__textWrap.pageHeadSection__textWrap-catalog
+                    if (content.lead)
+                        b.pageHeadSection__catalogLead
+                            | #{content.lead}
+                    if (content.text)
+                        p.pageHeadSection__catalogText
+                            != content.text
+                    if (content.foo)
+                        span.pageHeadSection__catalogFoo
+                            != content.foo
+                if (content.bannerLead) 
+                    b.pageHeadSection__bannerLead
+                        span
+                            != content.bannerLead
+                    
+    else if (type == "inner")
+        section.pageHeadSection.pageHeadSection-inner
+            .pageHeadSection__pathWrap.pageHeadSection__pathWrap-innerPage
+                .pageHeadSection__path
+                    h1.pageHeadSection__pathHeading
+                        | #{path.heading}
+                    ul.pageHeadSection__pathList
+                        each item in path.list
+                            +pageHead__pathMixin(item)

@@ -12,6 +12,23 @@ html(class="no-js", lang="en")
 
         main.pageContent
 
+            -
+                var what = "catalog"
+                var imgPath = "static/img/content/remnantsHead/remnantsHead__bgr.jpg"
+                var remnantsHeadPath = {
+                    heading: "<span class='pageHeadSection__stoneHeading'>remnants sale</span>",
+                    list: ["Home", "Remnants sale"]
+                }
+                var remnantsHeadContent = {
+                    lead: "We have 2,000+ granite and quartz remnants in stock!",
+                    text: "<span>At a leader in natural and fabricated stone countertops, we install hundreds of perfectly measured and cut kitchen and bathroom countertops every year. With all that business comes an excess of high-quality stone remnants.</span><span>Remnants are a cost effective, eco-friendly choice for a wide variety of smaller projects like vanities, fireplace surrounds and Islands. We have hundreds of granite, marbel, quartz and other natural stone leftover material available in our stock. If you need a smaller piece of natural stone for your project, then choose from the inventory below.</span>",
+                    foo: "Call us at today at 888-906-3317!",
+                    bannerLead: " GRANITE AND QUARTZ <br> REMNANTS SALE <br> STARTS FROM $26 PER sq.ft "
+                }
+
+            include ../components/pageHeadSection/pageHeadSection.pug
+            +pageHead__mixin(what, imgPath, remnantsHeadPath, remnantsHeadContent)
+
             //- include ../components
 
         include ../components/footer/footer.pug
