@@ -1,0 +1,64 @@
+//- {img, isSpecial, heading, specs, btns, stars}
+
+mixin productsSlider__slideMixin(obj)
+    - var productsSlider__imgClassList
+    - if (obj.isSpecial) productsSlider__imgClassList = "productsSlider__imgWrap-special"
+    .productsSlider__slide
+        .productsSlider__slideInner
+            .productsSlider__imgWrap(class=productsSlider__imgClassList)
+                img.productsSlider__img(src=obj.img alt="")
+                span.productsSlider__special
+                    | special
+            .productsSlider__textWrap
+                if (obj.heading)
+                    h3.productsSlider__heading
+                        != obj.heading
+                if (obj.specs)
+                    ul.productsSlider__specs
+                        each item in obj.specs
+                            li.productsSlider__specsItem
+                                != item
+                if (obj.btns)
+                    .productsSlider__slideBtns
+                        a.productsSlider__slideBtn(href="#")
+                            | send request
+                        a.productsSlider__slideBtn(href="#")
+                            | view
+                            span →
+                else if (obj.stars)
+                    - var count = 1
+                    - var stars = +obj.stars
+                    .productsSlider__slideRateWrap
+                        .productsSlider__slideStarsWrap
+                            while count <= 5
+                                if (((stars - Math.floor(stars)) != 0) && (count == Math.ceil(stars)))
+                                    .productsSlider__slideStar.productsSlider__slideStar-half
+                                else if (count > stars)
+                                    .productsSlider__slideStar.productsSlider__slideStar-empty
+                                else if (count <= stars)
+                                    .productsSlider__slideStar.productsSlider__slideStar-full
+                                - ++count
+                        span.productsSlider__slideRateNum
+                            != obj.stars
+        
+
+mixin productsSlider__mixin(heading, bgr, list, sliderClass)
+    - var productsSlider__bgr = "background: " + bgr + ";";
+    section.productsSliderSection(style=productsSlider__bgr)
+        .productsSliderSection__inner
+            .productsSliderSection__head
+                h2.productsSliderSection__heading
+                    != heading
+                a.productsSliderSection__link.link(href="#")
+                    | view all
+                    span →
+            .productsSliderSection__sliderWrap.productsSlider
+                .productsSlider__inner(class=sliderClass)
+                    each item in list
+                        +productsSlider__slideMixin(item)
+                -
+                    var btnClass = sliderClass + "__btn"
+                    var btnPrevClass = btnClass + "-prev"
+                    var btnNextClass = btnClass + "-next"
+                button.productsSlider__btn.productsSlider__btn-prev(class=btnClass + " " + btnPrevClass type="button")
+                button.productsSlider__btn.productsSlider__btn-next(class=btnClass + " " + btnNextClass type="button")
