@@ -11141,6 +11141,644 @@ input {
   color: #333f4b;
 }
 
+.prodInnerGalSection {
+  font: 400 16px/2 "SourceSansPro", sans-serif;
+  color: #333f4b;
+}
+
+.prodInnerGalControls__slider .slick-current {
+  display: none;
+}
+
+.prodInnerGalControls {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.prodInnerGalControls__sliderWrap {
+  position: relative;
+}
+
+@media (min-width: 1280px) {
+  .prodInnerGalControls__sliderWrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+  }
+}
+
+.prodInnerGalControls__itemInner {
+  padding: 44px 5px 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+@media (min-width: 960px) {
+  .prodInnerGalControls__itemInner {
+    padding: 44px 100px 24px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .prodInnerGalControls__itemInner {
+    padding: 24px 0;
+  }
+}
+
+.prodInnerGalControls__btn {
+  display: block;
+  width: 50%;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: transparent;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.prodInnerGalControls__btn-prev {
+  border-right: 1px solid rgba(227, 227, 227, 0.5);
+  left: 0;
+  right: 50%;
+}
+
+.prodInnerGalControls__btn-prev:hover {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(51, 63, 75, 0.05)), to(rgba(255, 255, 255, 0.05)));
+  background: -webkit-linear-gradient(right, rgba(51, 63, 75, 0.05), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(to left, rgba(51, 63, 75, 0.05), rgba(255, 255, 255, 0.05));
+}
+
+.prodInnerGalControls__btn-prev span {
+  padding: 0 0 0 30px;
+  text-align: left;
+}
+
+.prodInnerGalControls__btn-prev span::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url("../img/content/remInnerGal/chevronLeft.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.prodInnerGalControls__btn-next {
+  border-left: 1px solid rgba(227, 227, 227, 0.5);
+  left: 50%;
+  right: 0;
+}
+
+.prodInnerGalControls__btn-next:hover {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(51, 63, 75, 0.05)), to(rgba(255, 255, 255, 0.05)));
+  background: -webkit-linear-gradient(left, rgba(51, 63, 75, 0.05), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(to right, rgba(51, 63, 75, 0.05), rgba(255, 255, 255, 0.05));
+}
+
+.prodInnerGalControls__btn-next span {
+  padding: 0 30px 0 0;
+  text-align: right;
+}
+
+.prodInnerGalControls__btn-next span::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url("../img/content/remInnerGal/chevronRight.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.prodInnerGalControls__btn span {
+  width: 93.75%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font: 700 14px/1 "BrandonGrotesque", sans-serif;
+  color: rgba(34, 35, 45, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+@media (min-width: 960px) {
+  .prodInnerGalControls__btn span {
+    width: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .prodInnerGalControls__btn span {
+    left: auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 1280px) {
+  .prodInnerGalControls__btn-prev span {
+    left: 100px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .prodInnerGalControls__btn-next span {
+    right: 100px;
+  }
+}
+
+.prodInnerGalControls__imgWrap {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .prodInnerGalControls__imgWrap {
+    margin: 0 16px 0 0;
+  }
+}
+
+.prodInnerGalControls__img {
+  width: 32px;
+  height: 32px;
+}
+
+.prodInnerGalControls__name {
+  font: 700 18px/1.3 "BrandonGrotesque", sans-serif;
+  color: #22232d;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.prodInnerGalSlider {
+  background-color: rgba(51, 63, 75, 0.05);
+}
+
+.prodInnerGalSlider__sliderWrap {
+  padding: 40px 30px;
+}
+
+@media (min-width: 960px) {
+  .prodInnerGalSlider__sliderWrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px 100px;
+  }
+}
+
+@media (min-width: 960px) {
+  .prodInnerGalSlider__itemInner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.prodInnerGalSlider__imgWrap {
+  margin: 0 0 20px;
+}
+
+@media (min-width: 960px) {
+  .prodInnerGalSlider__imgWrap {
+    width: 45%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+}
+
+.prodInnerGalSlider__imgLink {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.prodInnerGalSlider__imgLink::before {
+  content: "";
+  display: block;
+  padding-top: 70%;
+}
+
+.prodInnerGalSlider__imgLink i {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #e5493a;
+  border-radius: 50%;
+}
+
+.prodInnerGalSlider__imgLink:hover i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.prodInnerGalSlider__img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+@media (min-width: 960px) {
+  .prodInnerGalSlider__textWrap {
+    width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+}
+
+.prodInnerGalSlider__text {
+  display: none;
+  margin: 30px 0 0;
+  position: relative;
+}
+
+.prodInnerGalSlider__text::before {
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  background-color: rgba(34, 35, 45, 0.05);
+}
+
+.prodInnerGalSlider__labelWrap {
+  border-bottom: 2px solid rgba(34, 35, 45, 0.05);
+}
+
+.prodInnerGalSlider__label {
+  padding: 17px 0;
+  display: inline-block;
+  position: relative;
+  font: 700 18px/1 "BrandonGrotesque", sans-serif;
+  text-transform: uppercase;
+  color: rgba(34, 35, 45, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.prodInnerGalSlider__label:not(only-of-type) {
+  margin: 0 5% 0 0;
+}
+
+.prodInnerGalSlider__label::after {
+  content: "";
+  display: none;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background-color: #e5493a;
+}
+
+.prodInnerGalSlider__labelRate {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.prodInnerGalSlider__labelRateStars {
+  margin: 0 0 0 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.prodInnerGalSlider__labelStar {
+  width: 15px;
+  height: 15px;
+  margin: 0 2px 0 0;
+}
+
+.prodInnerGalSlider__labelStar-full {
+  background: url("../img/content/prodInnerGal/starFull.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.prodInnerGalSlider__labelStar-half {
+  background: url("../img/content/prodInnerGal/starHalf.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.prodInnerGalSlider__labelStar-empty {
+  background: url("../img/content/prodInnerGal/starEmpty.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.prodInnerGalSlider__labelRateNum {
+  font: 700 12px/1 "SourceSansPro", sans-serif;
+  color: #333f4b;
+  text-transform: uppercase;
+}
+
+.prodInnerGalSlider__radio {
+  display: none;
+}
+
+.prodInnerGalSlider__radio:checked + .prodInnerGalSlider__label {
+  color: #22232d;
+}
+
+.prodInnerGalSlider__radio:checked + .prodInnerGalSlider__label::after {
+  display: block;
+}
+
+.prodInnerGalSlider__radio#specs-1:checked ~ .prodInnerGalSlider__radioWrap .prodInnerGalSlider__text-specs1 {
+  display: block;
+}
+
+.prodInnerGalSlider__radio#descr-1:checked ~ .prodInnerGalSlider__radioWrap .prodInnerGalSlider__text-descr1 {
+  display: block;
+}
+
+.prodInnerGalSlider__radio#revs-1:checked ~ .prodInnerGalSlider__radioWrap .prodInnerGalSlider__text-revs1 {
+  display: block;
+}
+
+.prodInnerGalSlider__specsList {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.prodInnerGalSlider__specsItem {
+  font: 400 16px/2 "SourceSansPro", sans-serif;
+  color: #333f4b;
+}
+
+.prodInnerGalSlider__specsItem i {
+  width: 25px;
+  margin: 0 5px 0 0;
+  font-size: 16px;
+  color: rgba(34, 35, 45, 0.3);
+}
+
+.prodInnerGalSlider__specsItem span {
+  margin: 0 5px 0 0;
+  font-weight: 700;
+}
+
+.prodInnerGalSlider__specsItem span a {
+  margin: 0 0 0 5px;
+  font: inherit;
+  text-decoration: none;
+  color: #1c70e8;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.prodInnerGalSlider__specsItem span a:hover {
+  opacity: .5;
+}
+
+.prodInnerGalSlider__specsItem sup {
+  margin: 0 0 0 8px;
+  font: 400 12px/2 "SourceSansPro", sans-serif;
+  color: rgba(51, 63, 75, 0.5);
+}
+
+.prodInnerGalSlider__specsDescr {
+  max-width: 500px;
+  margin: 0 0 15px;
+}
+
+.prodInnerGalSlider__specsMoreInfo {
+  font: 700 16px/2 "SourceSansPro", sans-serif;
+  color: #333f4b;
+}
+
+.prodInnerGalSlider__specsMoreInfoLink {
+  margin: 0 0 0 8px;
+  font: 700 14px/2 "BrandonGrotesque", sans-serif;
+  color: #1c70e8;
+  text-transform: uppercase;
+}
+
+.prodInnerGalSlider__specLink {
+  padding: 18px 30px;
+}
+
+.prodInnerGalSlider__specLink-link {
+  display: inline-block;
+  font: 700 14px/2 "BrandonGrotesque", sans-serif;
+  text-transform: uppercase;
+  color: #1c70e8;
+}
+
+@media (min-width: 768px) {
+  .prodInnerGalSlider__specLink-link {
+    margin: 0 0 0 10px;
+  }
+}
+
+.prodInnerGalSlider__specSocials {
+  margin: 0 0 0 30px;
+  padding: 16px 0 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font: 700 12px/1 "BrandonGrotesque", sans-serif;
+  color: #22232d;
+  text-transform: uppercase;
+}
+
+.prodInnerGalSlider__specSocialsList {
+  margin: 0;
+  padding: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  list-style: none;
+}
+
+.prodInnerGalSlider__specSocialsItem {
+  margin: 0 0 0 16px;
+}
+
+.prodInnerGalSlider__specSocialsLink {
+  font-size: 20px;
+  color: rgba(34, 35, 45, 0.3);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.prodInnerGalSlider__specSocialsLink:hover {
+  color: rgba(34, 35, 45, 0.8);
+}
+
+.prodInnerGalSlider__imgList {
+  margin: 18px 0 0;
+  padding: 0 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.prodInnerGalSlider__imgItem {
+  width: 31%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.prodInnerGalSlider__imgThumbLink {
+  display: block;
+  position: relative;
+}
+
+.prodInnerGalSlider__imgThumbLink::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.prodInnerGalSlider__imgThumbLink-checked::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  border: 3px solid #e5493a;
+}
+
+.prodInnerGalSlider__imgThumb {
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.prodInnerGalSlider__revsNum {
+  font: 400 16px/2 "SourceSansPro", sans-serif;
+  color: #333f4b;
+}
+
+.prodInnerGalSlider__revsNum span {
+  margin: 0 8px 0 0;
+}
+
+.prodInnerGalSlider__revsList {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prodInnerGalSlider__revsItem {
+  margin: 0 0 24px;
+}
+
+.prodInnerGalSlider__revsName {
+  margin: 0 24px 0 0;
+  font: 600 16px/2 "SourceSansPro", sans-serif;
+  color: #22232d;
+}
+
+.prodInnerGalSlider__revsRate {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.prodInnerGalSlider__revsRateStars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.prodInnerGalSlider__revsStar {
+  width: 15px;
+  height: 15px;
+  margin: 0 2px 0 0;
+}
+
+.prodInnerGalSlider__revsStar-full {
+  background: url("../img/content/prodInnerGal/starFull.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.prodInnerGalSlider__revsStar-half {
+  background: url("../img/content/prodInnerGal/starHalf.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.prodInnerGalSlider__revsStar-empty {
+  background: url("../img/content/prodInnerGal/starEmpty.svg") no-repeat center center;
+  background-size: contain;
+}
+
+.prodInnerGalSlider__revsRateNum {
+  font: 700 12px/1 "SourceSansPro", sans-serif;
+  color: #333f4b;
+  text-transform: uppercase;
+}
+
+.prodInnerGalSlider__revsText {
+  margin: 5px 0 0;
+  font: 400 14px/1.6 "SourceSansPro", sans-serif;
+  color: rgba(34, 35, 45, 0.7);
+}
+
+.prodInnerGalSlider__revsLink {
+  display: block;
+  margin: 0 0 40px;
+  font: 700 14px/2 "BrandonGrotesque", sans-serif;
+  color: #1c70e8;
+  text-transform: uppercase;
+}
+
 .productsSliderSection {
   font: 400 14px/2 "SourceSansPro", sans-serif;
   color: #333f4b;

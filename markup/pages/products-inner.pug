@@ -25,6 +25,54 @@ html(class="no-js", lang="en")
 
             //- include ../components/
 
+            include ../components/prodInnerGalSection/prodInnerGalSection.pug
+
+            include ../components/productsSliderSection/productsSliderSection.pug
+            -
+                var productsInnerSliderHeading = "More grey, Silver Silestone Stones"
+                var productsInnerSliderBgr = "#f5f9ff"
+                //- {img, isSpecial, heading, specs, btns, stars}
+                var productsInnerSliderSlideList = [
+                    {
+                        img: "static/img/content/productsInnerSilverstoneSlider/productsInnerSilverstonesSlider__img-1.jpg",
+                        isSpecial: false,
+                        heading: "Fossil Taupe",
+                        specs: ["<i class='fas fa-boxes'></i>Silestone", "<i class='fas fa-dollar-sign'></i><span>$45</span> / square feet"],
+                        stars: 4.5
+                    },
+                    {
+                        img: "static/img/content/productsInnerSilverstoneSlider/productsInnerSilverstonesSlider__img-2.jpg",
+                        isSpecial: true,
+                        heading: "Mara Blanca",
+                        specs: ["<i class='fas fa-boxes'></i>Silestone", "<i class='fas fa-dollar-sign'></i><span>$49</span> / square feet"],
+                        stars: 4
+                    },
+                    {
+                        img: "static/img/content/productsInnerSilverstoneSlider/productsInnerSilverstonesSlider__img-3.jpg",
+                        isSpecial: true,
+                        heading: "Chrome",
+                        specs: ["<i class='fas fa-boxes'></i>Silestone", "<i class='fas fa-dollar-sign'></i><span>$45</span> / square feet"],
+                        stars: 5
+                    },
+                    {
+                        img: "static/img/content/productsInnerSilverstoneSlider/productsInnerSilverstonesSlider__img-4.jpg",
+                        isSpecial: false,
+                        heading: "lagoon",
+                        specs: ["<i class='fas fa-boxes'></i>Silestone", "<i class='fas fa-dollar-sign'></i><span>$45</span> / square feet"],
+                        stars: 3.4
+                    },
+                    {
+                        img: "static/img/content/productsInnerSilverstoneSlider/productsInnerSilverstonesSlider__img-5.jpg",
+                        isSpecial: true,
+                        heading: "Mara Blanca",
+                        specs: ["<i class='fas fa-boxes'></i>Silestone", "<i class='fas fa-dollar-sign'></i><span>$45</span> / square feet"],
+                        stars: 4.4
+                    }
+                ]
+                //- class for new js slider
+                var productsInnerSliderClass = "productsInnerPageSlider"
+            +productsSlider__mixin(productsInnerSliderHeading, productsInnerSliderBgr, productsInnerSliderSlideList, productsInnerSliderClass)
+
             include ../components/bannerKitchenSection/bannerKitchenSection.pug
 
         include ../components/footer/footer.pug
