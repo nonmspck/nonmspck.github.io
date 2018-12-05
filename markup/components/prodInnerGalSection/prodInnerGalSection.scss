@@ -409,6 +409,60 @@
             display: block;
         }
     }
+
+    &#specs-2:checked {
+        ~ .prodInnerGalSlider__radioWrap .prodInnerGalSlider__text-specs2 {
+            display: block;
+        }
+    }
+
+    &#descr-2:checked {
+        ~ .prodInnerGalSlider__radioWrap .prodInnerGalSlider__text-descr2 {
+            display: block;
+        }
+    }
+
+    &#revs-2:checked {
+        ~ .prodInnerGalSlider__radioWrap .prodInnerGalSlider__text-revs2 {
+            display: block;
+        }
+    }
+    
+    &#specs-3:checked {
+        ~ .prodInnerGalSlider__radioWrap .prodInnerGalSlider__text-specs3 {
+            display: block;
+        }
+    }
+
+    &#descr-3:checked {
+        ~ .prodInnerGalSlider__radioWrap .prodInnerGalSlider__text-descr3 {
+            display: block;
+        }
+    }
+
+    &#revs-3:checked {
+        ~ .prodInnerGalSlider__radioWrap .prodInnerGalSlider__text-revs3 {
+            display: block;
+        }
+    }
+
+    &#specs-4:checked {
+        ~ .prodInnerGalSlider__radioWrap .prodInnerGalSlider__text-specs4 {
+            display: block;
+        }
+    }
+
+    &#descr-4:checked {
+        ~ .prodInnerGalSlider__radioWrap .prodInnerGalSlider__text-descr4 {
+            display: block;
+        }
+    }
+
+    &#revs-4:checked {
+        ~ .prodInnerGalSlider__radioWrap .prodInnerGalSlider__text-revs4 {
+            display: block;
+        }
+    }
 }
 
 .prodInnerGalSlider__specsList {

@@ -33,6 +33,55 @@ html(class="no-js", lang="en")
 
             //- include ../components
 
+            include ../components/faqSection/faqSection.pug
+
+            include ../components/productsSliderSection/productsSliderSection.pug
+
+            -
+                var remnantsCatalogSliderHeading = "GRANITE & QUARTZ COUNTERTOP SPECIALS"
+                var remnantsCatalogSliderBgr = "#f5f9ff"
+                //- {img, isSpecial, heading, specs, btns, stars}
+                var remnantsCatalogSliderSlideList = [
+                    {
+                        img: "static/img/content/remnantsPageSpecialsSlider/remnantsPageSpecialsSlider__img-1.jpg",
+                        isSpecial: true,
+                        heading: "Fossil Taupe",
+                        specs: ["<i class='fas fa-boxes'></i>Silestone", "<i class='fas fa-dollar-sign'></i><span>$45</span> / square feet"],
+                        stars: 4.5
+                    },
+                    {
+                        img: "static/img/content/remnantsPageSpecialsSlider/remnantsPageSpecialsSlider__img-2.jpg",
+                        isSpecial: true,
+                        heading: "Mara Blanca",
+                        specs: ["<i class='fas fa-boxes'></i>Silestone", "<i class='fas fa-dollar-sign'></i><span>$49</span> / square feet"],
+                        stars: 4
+                    },
+                    {
+                        img: "static/img/content/remnantsPageSpecialsSlider/remnantsPageSpecialsSlider__img-3.jpg",
+                        isSpecial: true,
+                        heading: "Chrome",
+                        specs: ["<i class='fas fa-boxes'></i>Silestone", "<i class='fas fa-dollar-sign'></i><span>$45</span> / square feet"],
+                        stars: 5
+                    },
+                    {
+                        img: "static/img/content/remnantsPageSpecialsSlider/remnantsPageSpecialsSlider__img-4.jpg",
+                        isSpecial: true,
+                        heading: "lagoon",
+                        specs: ["<i class='fas fa-boxes'></i>Silestone", "<i class='fas fa-dollar-sign'></i><span>$45</span> / square feet"],
+                        stars: 3.4
+                    },
+                    {
+                        img: "static/img/content/remnantsPageSpecialsSlider/remnantsPageSpecialsSlider__img-5.jpg",
+                        isSpecial: true,
+                        heading: "Mara Blanca",
+                        specs: ["<i class='fas fa-boxes'></i>Silestone", "<i class='fas fa-dollar-sign'></i><span>$45</span> / square feet"],
+                        stars: 4.4
+                    }
+                ]
+                //- class for new js slider
+                var remnantsCatalogSliderClass = "remCatalogSlider"
+            +productsSlider__mixin(remnantsCatalogSliderHeading, remnantsCatalogSliderBgr, remnantsCatalogSliderSlideList, remnantsCatalogSliderClass)
+
         include ../components/footer/footer.pug
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
