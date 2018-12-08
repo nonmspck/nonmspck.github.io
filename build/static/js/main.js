@@ -3740,6 +3740,7 @@ $(window).scroll(function () {
 "use strict";
 "use strict";
 "use strict";
+"use strict";
 
 var $prodInnerGalControls = $(".prodInnerGalControls__slider");
 
@@ -4044,3 +4045,4 @@ $teamHeadSlider.slick({
         }
     }]
 });
+"use strict";

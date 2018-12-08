@@ -33,6 +33,10 @@ html(class="no-js", lang="en")
 
             //- include ../components
 
+            include ../components/howItWorksBanner/howItWorksBanner.pug
+
+            include ../components/revsSliderSection/revsSliderSection.pug
+
             include ../components/faqSection/faqSection.pug
 
             include ../components/productsSliderSection/productsSliderSection.pug
@@ -90,3 +94,4 @@ html(class="no-js", lang="en")
         script(src='%=static=%js/separate-js/jquery-3.2.1.min.js')
         script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
         script(src='%=static=%js/main%=hash=%%=min=%.js')
+        script(src='%=static=%js/separate-js/faqSection.js')
