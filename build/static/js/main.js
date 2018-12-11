@@ -3941,6 +3941,7 @@ $projectsSlider.slick({
     }]
 });
 "use strict";
+"use strict";
 
 var $remInnerGalControls = $(".remInnerGalControls__slider");
 
